@@ -1,0 +1,149 @@
+<html>
+    <head>
+        <title>HTML forms</title>
+        <style type="text/css">
+            label{
+                width: 150px;
+                display:inline-block;
+            }
+            form{
+                border-radius: 10px;
+                background:rgba(202, 215, 228, 0.973);
+                color:rgb(8, 8, 11);
+                width: 60%;
+                padding:4px;
+                margin: auto;
+                font-size: 18px;
+                font-family:'Times New Roman', Times, serif;
+
+            }
+            .submit{
+                text-align: right;
+            }
+            
+            
+            
+        </style>
+    </head>
+    <body>
+        
+        
+        <center><h1>Employee Details<hr width="850px" ></h1></center>
+        <form>
+            
+                <label>First Name:</label>
+                <input type="text" title="first name" placeholder="Enter a name"  size="30"><br><br>
+                <label>Last Name:</label>
+                <input type="text" title="last name" placeholder="Enter a name" size="30"><br><br>
+                <label>DOB:</label>
+                <input type="date" name="dob"><br><br>
+                <label>Age:</label>
+                <input type="number" id="quantity" name="quantity" min="20" max="40" pattern="[20-40]{2}"><br><br>
+                <label>Gender:</label>
+                <input type ="radio" name="gender" value="male" >Male
+                <input type = "radio" name="gender" value="female">Female<br><br>
+                <label>City:</label>
+                <select>
+                    <option></option>
+                        <option>chennai</option>
+                        <option>coimbatore</option>
+                        <option>others</option>
+                </select><br><br>
+                <label>State:</label>
+                <select>
+                        <option></option>
+                        <option>chennai</option>
+                        <option>coimbatore</option>
+                        <option>others</option>
+                </select><br><br>
+                <label>Email:</label>
+                <input type="emailid" placeholder="example@gmail.com" required><br><br>
+                <label id="num">Contact No:</label> 
+                <input type="tel" id="num" maxlength="10" oninput="numberonly(this)" required>
+                <script type="text/javascript">
+                    function numberonly(input)
+                    {
+                        var num=/[^0-9]/gi;
+                        input.value=input.value.replace(num,"");
+                    }
+                       
+                </script><br><br> 
+                <label>Qualification:</label>
+                <select>
+                    <option></option>
+                    <option>U.G</option>
+                    <option>P.G</option>
+                    <option>Dip</option>
+                </select><br><br>
+                <label>Designation:</label>
+                <input type="text"><br><br>
+                <label>Skills:</label>
+                <input type="text"><br><br>
+                <label>Language Known:</label>
+                <input type="checkbox" name="l1">
+                <label>English</label>
+                <input type="checkbox" name="l2">
+                <label>Hindi</label>
+                <input type="checkbox" name="l3">
+                <label>Tamil</label><br><br>
+                <label>Experience:</label>
+                    <select>
+                        <option></option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option selected>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                    </select><br><br>
+                <label>Date of Joining:</label>
+                <input type="date"><br><br>
+                <label>Programming Skills:</label><br><br>
+                <table>
+                    <style>
+                        table, th, td {
+                            border: 1px solid black;
+                            border-collapse: collapse;
+                            padding-top: 5px;
+                            padding-bottom: 5px;
+                            padding-left: 10px;
+                            padding-right: 10px;
+                            
+                            
+                        }
+                    </style>
+                    
+                    <tr>
+                        <th>s.no</th>
+                        <th>language</th>
+                        <th>level</th>
+                        <th>certificate</th>
+                    </tr>
+                    <tr>
+                        <td>1.</td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="file"></td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="file" size="2"></td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="file" multiple></td>
+                    </tr>
+                </table><br>
+                <label>Photo:</label>
+                <input type="file" ><br><br>
+                <div class="submit">
+                <input type="submit" name="submit" style="font-size: large;" id="submit" >
+                </div>
+           </form>
